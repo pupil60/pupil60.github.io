@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Prairie Smoke MN</title>
+  <title>Events • Prairie Smoke MN</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="css/styles.css" rel="stylesheet">
 </head>
@@ -10,9 +10,7 @@
   <!-- HEADER -->
   <header>
     <div class="header-inner">
-      <a href="index.html" class="logo">
-        <img src="images/logo.jpg" alt="Prairie Smoke Logo">
-      </a>
+      <a href="index.html" class="logo"><img src="images/logo.jpg" alt="Prairie Smoke Logo"></a>
        <!-- Hamburger button 
     <button class="nav-toggle" aria-label="Toggle navigation">
       ☰
@@ -21,7 +19,7 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="events.html">Events</a></li>
+          <li><a href="events.html" class="active">Events</a></li>
           <li><a href="management.html">Management</a></li>
           <li><a href="resources.html">Resources</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -31,34 +29,25 @@
     </div>
   </header>
 
-  <!-- MAIN CONTENT -->
   <main>
-    <section class="hero">
+    <section class="page-intro">
       <div class="container">
-        <h1>Welcome to Prairie Smoke</h1>
-        <p>Supporting prairie restoration, propagation, and education in southeast Minnesota.</p>
-        <a class="btn" href="about.html">Learn More</a>
+        <h1>Events</h1>
+        <p>Stay connected with Prairie Smoke! Here are our upcoming workshops, volunteer days, and gatherings.</p>
       </div>
     </section>
 
-    <section class="grid">
-      <div class="container">
-        <div class="card">
-          <h2>Upcoming Events</h2>
-          <p>Check out our latest activities and gatherings.</p>
-          <a href="events.html" class="btn-secondary">View Events</a>
-        </div>
-        <div class="card">
-          <h2>Membership</h2>
-          <p>Join Prairie Smoke to help support prairie conservation.</p>
-          <a href="about.html" class="btn-secondary">Join Us</a>
-        </div>
-        <div class="card">
-          <h2>Resources</h2>
-          <p>Guides, photos, and articles about prairie management.</p>
-          <a href="resources.html" class="btn-secondary">Explore</a>
-        </div>
-      </div>
+    <section class="events-list container">
+      <article class="event">
+        <h2>Spring Prairie Walk</h2>
+        <p><strong>Date:</strong> May 10, 2025 • <strong>Location:</strong> Chester Woods Park</p>
+        <p>Join us for a guided walk to learn about emerging prairie wildflowers and pollinators.</p>
+      </article>
+      <article class="event">
+        <h2>Seed Collecting Workshop</h2>
+        <p><strong>Date:</strong> September 15, 2025 • <strong>Location:</strong> Rochester, MN</p>
+        <p>Learn how to identify, collect, and store native prairie seeds for future restoration projects.</p>
+      </article>
     </section>
   </main>
 
@@ -70,14 +59,15 @@
       <p>&copy; 2025 Prairie Smoke MN • 501(c)(3) Volunteer Organization</p>
     </div>
   </footer>
- <!-- <script>
+ <!--- <script>
   const navToggle = document.querySelector('.nav-toggle');
   const nav = document.querySelector('.main-nav');
 
   navToggle.addEventListener('click', () => {
     nav.classList.toggle('nav-open');
   });
-</script>  -->
+</script> -->
 
 </body>
 </html>
+

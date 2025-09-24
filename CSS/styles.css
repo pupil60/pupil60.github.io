@@ -1,0 +1,288 @@
+/* ==============================
+   Base Styles
+   ============================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fafafa;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: #2c6e49;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* ==============================
+   Layout Helpers
+   ============================== */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ==============================
+   Header & Navigation
+   ============================== */
+header {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 5%;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.main-nav a {
+  font-weight: bold;
+  color: #2c6e49;
+  padding: 0.25rem 0.5rem;
+  transition: background 0.3s;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  background: #e4f0e8;
+  border-radius: 4px;
+}
+
+/* ==============================
+   Hero Section
+   ============================== */
+.hero {
+  background: url("../images/prairie-bg.jpg") center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 5rem 2rem;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(44, 110, 73, 0.5); /* green overlay */
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+/* ==============================
+   Buttons
+   ============================== */
+.btn,
+.btn-secondary {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
+}
+
+.btn {
+  background: #2c6e49;
+  color: #fff;
+}
+
+.btn:hover {
+  background: #24563a;
+}
+
+.btn-secondary {
+  background: #f1f1f1;
+  color: #2c6e49;
+}
+
+.btn-secondary:hover {
+  background: #e4f0e8;
+}
+
+/* ==============================
+   Cards
+   ============================== */
+.card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.card h2 {
+  margin-bottom: 1rem;
+}
+
+/* ==============================
+   Page Intro
+   ============================== */
+.page-intro {
+  background: #e4f0e8;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.page-intro h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* ==============================
+   Events List
+   ============================== */
+.events-list .event {
+  background: #fff;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #2c6e49;
+  border-radius: 4px;
+}
+
+.events-list h2 {
+  margin-bottom: 0.5rem;
+}
+
+/* ==============================
+   Resource List
+   ============================== */
+.resource-list {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+.resource-list li {
+  margin-bottom: 0.75rem;
+}
+
+/* ==============================
+   Contact Form
+   ============================== */
+.contact-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-form label {
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-form button {
+  justify-self: start;
+}
+
+/* ==============================
+   Footer
+   ============================== */
+footer {
+  background: #2c6e49;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+footer p {
+  margin: 0.5rem 0;
+}
+/* ==============================
+   Mobile Navigation
+   ============================== */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #2c6e49;
+}
+
+@media (max-width: 768px) {
+  .main-nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    background: #fff;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    position: absolute;
+    top: 70px;
+    right: 5%;
+    width: 200px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+
+  .main-nav.nav-open ul {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+}
